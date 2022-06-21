@@ -1,9 +1,9 @@
 
 /* Crear base de datos dbRestaurante */
-CREATE DATABASE dbRestaurante;
+CREATE DATABASE dbRestaurante2;
 
 /* Poner en uso la base de datos */
-USE dbRestaurante;
+USE dbRestaurante2;
 
 /* Crear tabla Pedido */
 CREATE TABLE Pedido
@@ -14,6 +14,7 @@ CREATE TABLE Pedido
      EMAUSPED varchar(80),
      CELUSPED char(9),
      FOODPED varchar(80),
+     DIRPED varchar(80),
      MSGPED   varchar(250),
      PRIMARY KEY (IDPED)
 );
