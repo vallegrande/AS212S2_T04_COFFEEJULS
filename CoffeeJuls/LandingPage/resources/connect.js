@@ -10,7 +10,7 @@ var conexion = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "admin",
-  database: "dbrestaurante2",
+  database: "dbCoffeeJulstTestConnect",
 });
 conexion.connect(function (error) {
     if (error) {

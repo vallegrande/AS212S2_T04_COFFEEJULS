@@ -1,9 +1,9 @@
 
 /* Crear base de datos dbRestaurante */
-CREATE DATABASE dbRestaurante2;
+CREATE DATABASE dbCoffeeJulstTestConnect;
 
 /* Poner en uso la base de datos */
-USE dbRestaurante2;
+USE dbCoffeeJulstTestConnect;
 
 /* Crear tabla Pedido */
 CREATE TABLE Pedido
