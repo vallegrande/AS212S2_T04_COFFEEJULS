@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+   <link rel="stylesheet" href="resources/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="resources/css/styles.css" />
+   <link rel="stylesheet" href="resources/css/estilos.css" />
+   <title>Principal</title>
+</head>
+
+<body>
+   <header class="header">
+      <section class="flex">
+         <a href="/CarruselTest2/index.html" class="logo"><img src="/CarruselTest2/images/logo.png" alt="" /></a>
+         <nav class="navbar"></nav>
+         <div id="menu-btn" class="fas fa-bars"></div>
+      </section>
+   </header>
+
+   <div id="overview">
+      <section class="order" id="order">
+         <h1 class="heading">
+            <span>Coffee Jul’s</span> registrate como trabajador
+         </h1>
+         <div id="form" class="row">
+            <form class="form">
+               <div class="inputBox">
+                  <input id="USERPED" placeholder="Nombre" type="text" class="form-control" required=""
+                     onkeypress="return soloLetras(event)" onblur="limpia()" />
+                  <input id="APETRA" placeholder="Apellido" type="text" class="form-control" required=""
+                     onkeypress="return soloLetras(event)" onblur="limpia()" />
+
+                  <input id="EMAUSPED" placeholder="Correo" type="text" class="form-control" required="" />
+               </div>
+               <div class="inputBox">
+                  <input id="CELUSPED" placeholder="Celular" type="number" class="form-control" required=""
+                     onkeypress="if(this.value.length > 8) return false" />
+                  <input id="FOODPED" placeholder="DNI" class="form-control" type="number" class="form-control"
+                     onkeypress="if(this.value.length > 7) return false" required="" />
+               </div>
+               <div class="inputBox">
+                  <input id="DIRPED" placeholder="Direccion" type="text" class="form-control" required="" />
+                  <input type="number" name="number" placeholder="UBIGEO-noFuncional" type="text" class="form-control"
+                     disabled="true" />
+                  <!--Para activar el boton, eliminar disabled="true"-->
+               </div>
+               <textarea id="MSGPED" placeholder="Mensaje" cols="30" rows="10" class="form-control"></textarea>
+
+               <button id="btnCrear" type="submit" class="btn btn-secondary">
+                  Ordenar ahora
+               </button>
+               <button type="reset" class="btn btn-secondary">Borrar</button>
+            </form>
+         </div>
+      </section>
+   </div>
+
+
+   <script src="js/script.js"></script>
+   <script src="resources/js/bootstrap.bundle.min.js"></script>
+   <script src="resources/registro.js"></script>
+</body>
+
+</html>
