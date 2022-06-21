@@ -10,7 +10,7 @@ var conexion = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "admin",
-  database: "dbrestaurante",
+  database: "dbrestaurante2",
 });
 conexion.connect(function (error) {
     if (error) {
