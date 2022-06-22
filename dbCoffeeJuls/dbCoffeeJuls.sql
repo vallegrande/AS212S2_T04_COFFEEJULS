@@ -112,14 +112,9 @@ INSERT INTO PEDIDO
 (USERPED, EMAUSPED, CELUSPED, FOODPED, MSGPED)
 VALUES
 ('José Ramírez', 'jose.ramirez@outlook.com', '974815236', 'Arroz con Pollo', 'Por favor enviar a la dirección Av. Miraflores 253, San Vicente de Cañete'),
+('Tester2', 'tester2@tests.com', '998515299', 'Arroz con Pato', 'Test Mensaje'),
+
 ('Ana Guerra Solano', 'ana.guerra@gmail.com', '981526321', 'Sopa Seca de Gallina', 'Necesito 4 platos');
-
-
-
-
-
-
-
 
 
 /*------ RELACIONAR LAS OTRAS TABLAS ------*/
@@ -374,30 +369,5 @@ WHERE
 
 
 
-
-
-
-/* ///////////////  USUARIO/////////////////*/
-
-/* Agregar columna ESTCLI estado del cliente A (activo) / I (inactivo) 
-ALTER TABLE CLIENTE
-	ADD ESTCLI CHAR(1) DEFAULT('A'); 
- */   
-/* /////////////// COMRPROBAR /////////////////*/
-
-
-/* /////////////// VENDEDOR /////////////////*/
-
-/* Agregar campo ESTVEND donde A es activo / I es inactivo 
-ALTER TABLE VENDEDOR
-	ADD ESTVEND CHAR(1) DEFAULT('A'); -- A (activo) I (inactivo)
-*/
-
-/* /////////////// COMRPROBAR SI SE REALIZO BIEN ESTE PASO/////////////////*/
-
-
-/* /////////////// COMRPROBAR SI SE REALIZO BIEN ESTE PASO/////////////////*/
-
-
-/*AGREGANDO MAS DATOS*/
-
+/*LISTAR PEDIDOS*/
+select * from pedido;
