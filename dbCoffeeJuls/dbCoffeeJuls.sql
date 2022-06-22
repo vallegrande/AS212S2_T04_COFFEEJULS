@@ -1,12 +1,12 @@
 /* Crear base de datos dbCofeeJuls */
-DROP DATABASE dbcofeejuls;
+DROP DATABASE dbCoffeeJuls;
 
 
 /* Crear base de datos dbCofeeJuls */
-CREATE DATABASE dbCofeeJuls;
+CREATE DATABASE dbCoffeeJuls;
 
 /* Poner en uso dbCofeeJuls */
-USE dbCofeeJuls;
+USE dbCoffeeJuls;
 
 /*------ Creacion de tablas ------*/
 
@@ -42,7 +42,7 @@ CREATE TABLE PRODUCTO
 /* Crear tabla VENDEDOR */
 CREATE TABLE VENDEDOR
 (
-    CODVEND char(6),
+    CODVEND int AUTO_INCREMENT,
     NOMVEND varchar(50),
     APEVEND varchar(50),
     DNIVEND char(8),
@@ -60,8 +60,8 @@ CREATE TABLE VENTA
 (
     IDVENT int AUTO_INCREMENT,
     FECVENT date,
-    CODVEND char(6),
-    CODCLI char(6),
+    CODVEND int,
+    CODCLI int ,
     TIPVENT char(1),
     CONSTRAINT IDVENT_PK PRIMARY KEY (IDVENT)
 );
@@ -69,10 +69,10 @@ CREATE TABLE VENTA
 /* Crear tabla CLIENTE */
 CREATE TABLE CLIENTE
 (
-    CODCLI char(6),
-    DNICLI char(8),
+    CODCLI int AUTO_INCREMENT,
     NOMCLI varchar(40),
     APECLI varchar(80),
+    DNICLI char(8),
     CELCLI char(9),
     EMACLI varchar(50),
     FECNACCLI date,
@@ -90,6 +90,37 @@ CREATE TABLE VENTA_DETALLE
     CANTVENTDET int,
     CONSTRAINT IDVENTDET_PK PRIMARY KEY (IDVENTDET)
 );
+
+
+
+/*CREAR TABLA PEDIDO PARA MI LANDINGPAGE*/
+CREATE TABLE Pedido
+(
+     IDPED int AUTO_INCREMENT,
+     USERPED varchar(80),
+     APETRA varchar(80),
+     EMAUSPED varchar(80),
+     CELUSPED char(9),
+     FOODPED varchar(80),
+     DIRPED varchar(80),
+     MSGPED   varchar(250),
+     PRIMARY KEY (IDPED)
+);
+
+
+INSERT INTO PEDIDO
+(USERPED, EMAUSPED, CELUSPED, FOODPED, MSGPED)
+VALUES
+('José Ramírez', 'jose.ramirez@outlook.com', '974815236', 'Arroz con Pollo', 'Por favor enviar a la dirección Av. Miraflores 253, San Vicente de Cañete'),
+('Ana Guerra Solano', 'ana.guerra@gmail.com', '981526321', 'Sopa Seca de Gallina', 'Necesito 4 platos');
+
+
+
+
+
+
+
+
 
 /*------ RELACIONAR LAS OTRAS TABLAS ------*/
 
@@ -159,18 +190,18 @@ VALUES
 
 /* Insertar registro tabla CLIENTE */
 INSERT INTO CLIENTE
-(CODCLI, NOMCLI, APECLI, CELCLI, EMACLI, FECNACCLI, UBICLI)
+( NOMCLI, APECLI, CELCLI, EMACLI, FECNACCLI, UBICLI)
 VALUES
-('CL0001','Alicia','García Campos','929185236','agarcia@gmail.com','1977/01/01','140409'),
-('CL0002','Juana','Ávila Chumpitaz','923568741','javila@gmail.com','1980/07/15','140402'),
-('CL0003','Oscar','Coronado Vásquez','932615478','ocoronado@gmail.com','1975/06/12','140403'),
-('CL0004','Luis','Barrios Palomino','932817645','lbarrios@outlook.com','1981/03/24','140409'),
-('CL0005','María','Tarazona Mendoza','978400123','mtarazona@outlook.com','1975/08/16','140407'),
-('CL0006','Pedro','Sánchez Dávila','941533268','psanchez@yahoo.com','1970/09/10','140402'),
-('CL0007','Aldo','Torres Zavala','958866221','atorres@yahoo.com','1980/02/20','140405'),
-('CL0008','Fiorella','Monteza Alzamora','992255441','fmonteza@gmail.com','1979/04/30','140408'),
-('CL0009','Gloria','Linares Rodríguez','954415950','glinares@hotmail.com','1981/09/23','140403'),
-('CL0010','Esperanza','Stark Parker','901133258','estark@yahoo.com','1978/10/24','140405');
+('Alicia','García Campos','929185236','agarcia@gmail.com','1977/01/01','140409'),
+('Juana','Ávila Chumpitaz','923568741','javila@gmail.com','1980/07/15','140402'),
+('Oscar','Coronado Vásquez','932615478','ocoronado@gmail.com','1975/06/12','140403'),
+('Luis','Barrios Palomino','932817645','lbarrios@outlook.com','1981/03/24','140409'),
+('María','Tarazona Mendoza','978400123','mtarazona@outlook.com','1975/08/16','140407'),
+('Pedro','Sánchez Dávila','941533268','psanchez@yahoo.com','1970/09/10','140402'),
+('Aldo','Torres Zavala','958866221','atorres@yahoo.com','1980/02/20','140405'),
+('Fiorella','Monteza Alzamora','992255441','fmonteza@gmail.com','1979/04/30','140408'),
+('Gloria','Linares Rodríguez','954415950','glinares@hotmail.com','1981/09/23','140403'),
+('Esperanza','Stark Parker','901133258','estark@yahoo.com','1978/10/24','140405');
 
 
 
@@ -190,11 +221,11 @@ VALUES
 
 /* Listar registros tabla VENDEDOR */
 INSERT INTO VENDEDOR
-(CODVEND, NOMVEND, APEVEND, DNIVEND, CELVEND, DOMVEND, UBIVEND)
+(NOMVEND, APEVEND, DNIVEND, CELVEND, DOMVEND, UBIVEND)
 VALUES
-('V00001','Alberto','Solano Pariona','77889955','99845632','Av. Miraflores','140405'),
-('V00002','Ana','Enriquez Flores','22116633','978848551','Calle Los Libertadores','140407'),
-('V00003','Carolina','Rojas Urrutia','66771144','916431258','Jr. José Olaya','140402');
+('Alberto','Solano Pariona','77889955','99845632','Av. Miraflores','140405'),
+('Ana','Enriquez Flores','22116633','978848551','Calle Los Libertadores','140407'),
+('Carolina','Rojas Urrutia','66771144','916431258','Jr. José Olaya','140402');
 
 /*Consultar el codigo del vendedor y cliente*/
 select CODVEND from vendedor ;
@@ -206,37 +237,37 @@ select CODCLI from cliente ;
 INSERT INTO VENTA
 (FECVENT, CODVEND, CODCLI, TIPVENT)
 VALUES
-('2022/12/21','V00002','CL0001','D');
+('2022/12/21','2','1','D');
 
 /* Insertar la segunda venta 2 */
 INSERT INTO VENTA
 (FECVENT, CODVEND, CODCLI, TIPVENT)
 VALUES
-('2022/01/11','V00001','CL0003','R');
+('2022/01/11','1','3','R');
 
 /* Insertar la tercera venta 3 */
 INSERT INTO VENTA
 (FECVENT, CODVEND, CODCLI, TIPVENT)
 VALUES
-('2022/03/05','V00001','CL0004','D');
+('2022/03/05','1','4','D');
 
 /* Insertar la cuarta venta 4*/
 INSERT INTO VENTA
 (FECVENT, CODVEND, CODCLI, TIPVENT)
 VALUES
-('2022/02/22','V00002','CL0004','R');
+('2022/02/22','2','4','R');
 
 /* Insertar la quinta venta 5*/
 INSERT INTO VENTA
 (FECVENT, CODVEND, CODCLI, TIPVENT)
 VALUES
-('2022/03/02','V00002','CL0004','D');
+('2022/03/02','2','4','D');
 
 /* Insertar la sexta venta 6*/
 INSERT INTO VENTA
 (FECVENT, CODVEND, CODCLI, TIPVENT)
 VALUES
-('2022/04/07','V00003','CL0004','R');
+('2022/04/07','3','4','R');
 
 /* ------- Insertar detalles a las ventas -------*/
 
@@ -259,7 +290,7 @@ VALUES
 INSERT INTO VENTA
 (FECVENT, CODVEND, CODCLI, TIPVENT)
 VALUES
-('2021/03/05','V00001','CL0004','D');
+('2021/03/05','1','4','D');
 
 /* Insertar detalles de la VENTA 4 */
 INSERT INTO VENTA_DETALLE
@@ -370,41 +401,3 @@ ALTER TABLE VENDEDOR
 
 /*AGREGANDO MAS DATOS*/
 
-/*
-
-CREATE DATABASE dbCoffeeJulstTestConnect;
-
-
-USE dbCoffeeJulstTestConnect;
-
-
-
-
-CREATE TABLE Pedido
-(
-     IDPED int AUTO_INCREMENT,
-     USERPED varchar(80),
-     APETRA varchar(80),
-     EMAUSPED varchar(80),
-     CELUSPED char(9),
-     FOODPED varchar(80),
-     DIRPED varchar(80),
-     MSGPED   varchar(250),
-     PRIMARY KEY (IDPED)
-);
-
-
-INSERT INTO PEDIDO
-(USERPED, EMAUSPED, CELUSPED, FOODPED, MSGPED)
-VALUES
-('José Ramírez', 'jose.ramirez@outlook.com', '974815236', 'Arroz con Pollo', 'Por favor enviar a la dirección Av. Miraflores 253, San Vicente de Cañete'),
-('Ana Guerra Solano', 'ana.guerra@gmail.com', '981526321', 'Sopa Seca de Gallina', 'Necesito 4 platos');
-
-SELECT * FROM PEDIDO;	
-
-*/
-/* Crear base de datos dbRestaurante */
-/* Poner en uso la base de datos */
-/* Crear tabla Pedido */
-/* Insertar registros */
-/* Listar los registros de la tabla PEDIDO */
