@@ -154,7 +154,7 @@ ALTER TABLE VENTA_DETALLE
 
 
 /* Listar tablas de la base de datos */
-SHOW TABLES FROM dbcofeejuls;
+SHOW TABLES FROM dbCoffeeJuls;
 
 /* Insertar registros CATEGORIA */
 INSERT INTO CATEGORIA
