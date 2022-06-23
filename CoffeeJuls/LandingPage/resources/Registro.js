@@ -48,7 +48,8 @@ formArticulo.addEventListener('submit',
                 	response => response.json()
             	)
             	.then(
-                	response => location.reload()
+                	response => location.reload(),
+						 alert("Datos enviados")
             	);
         	}
     	} else if(opcion == 'editar'){

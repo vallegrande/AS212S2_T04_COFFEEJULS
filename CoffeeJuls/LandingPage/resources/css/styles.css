@@ -20,10 +20,6 @@
   text-decoration: none;
 }
 
-*::selection{
-  background:var(--red);
-  color:#fff;
-}
 
 html{
   font-size: 62.5%;
@@ -313,7 +309,7 @@ header .navbar a:hover{
 }
 
 .order .row form .btn{
-  background:none;
+  background:rgb(219, 117, 33);
 }
 
 .order .row form .btn:hover{
@@ -520,10 +516,7 @@ header .navbar a:hover{
 }
 
 
-*::selection {
-  background-color: var(--main-color);
-  color: var(--white);
-}
+
 
 ::-webkit-scrollbar {
   height: 0.5rem;
@@ -601,10 +594,7 @@ section {
   color: var(--black);
 }
 
-.header .flex .navbar a:hover {
-  text-decoration: underline;
-  color: var(--main-color);
-}
+
 
 
 

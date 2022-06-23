@@ -72,7 +72,7 @@ section {
    margin-top: 1rem;
    background-color: var(--main-color);
    cursor: pointer;
-   color: var(--white);
+   color: rgb(255, 255, 255);
    font-size: 1.8rem;
    padding: 1rem 3rem;
 }
@@ -350,7 +350,7 @@ section {
    color: var(--main-color);
 }
 
-/* MAPA */
+/*-- MAPA --*/
 .mapa {
    margin-bottom: 60px;
 }
@@ -369,14 +369,7 @@ section {
 }
 
 @media (max-width: 768px) {
-   #menu-btn {
-      display: inline-block;
-      transition: 0.2s linear;
-   }
 
-   #menu-btn.fa-times {
-      transform: rotate(180deg);
-   }
 
    .header .flex .navbar {
       position: absolute;
@@ -430,8 +423,8 @@ section {
    }
 }
 
-/* Carrusel */
-.container__slider {
+/* -- Carrusel de Imagenes --*/
+.container__slider { 
    max-width: 1000px;
    height: 500px;
    margin: auto;
@@ -534,7 +527,6 @@ footer.home-footer {
 }
 /*----------TEST GALERIA--------------------*/
 
-
 .carreaux_presentation_light
 {
   display:table-cell;
@@ -543,10 +535,8 @@ footer.home-footer {
   overflow: hidden;
   position: relative;
   border-radius: 10%;
-
-
-  
 }
+/* Oscurer la imagen cuando no pasa el mouse*/
 .carreaux_presentation_light .shadow_swhow_mini
 {
   background-color:rgba(19,30,33,0.4);
@@ -559,6 +549,7 @@ footer.home-footer {
 {
   background-color:rgba(16,23,41,0);
 }
+/* MOSTRAR PALABRAS AL PASAR EL MOUSE 1ro*/
 .carreaux_presentation_light .deroul_titre
 {
   position: absolute;
@@ -581,6 +572,8 @@ footer.home-footer {
   background-color:#c96d04; left:0px;
   
 }
+
+/* MOSTRAR PALABRAS AL PASAR EL MOUSE 2do*/
 .carreaux_presentation_light .deroul_soustitre
 {
   position: absolute;
