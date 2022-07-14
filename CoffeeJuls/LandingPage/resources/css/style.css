@@ -20,7 +20,7 @@
 }
 
 body {
-   background-color: #f0dac5;
+   background-color: #ffffff;
 }
 
 *::selection {
@@ -126,7 +126,7 @@ section {
 
 .home-bg {
    background: linear-gradient(90deg, var(--white), transparent 70%),
-      url("/AS212S2_T04_COFFEEJULS-main/CoffeeJuls/LandingPage/images/home-bg.jpg") no-repeat;
+      url('../../images/home-bg.jpg') no-repeat;
    background-size: cover;
    background-position: center;
 }
@@ -628,7 +628,7 @@ footer.home-footer {
 
 
 
-
+/*------  REDES  -------*/
 
 
 .wrapper {
