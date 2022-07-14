@@ -428,6 +428,7 @@ section {
 
 /* -- Carrusel de Imagenes --*/
 .container__slider {
+   
    max-width: 1000px;
    height: 500px;
    margin: auto;
@@ -436,6 +437,7 @@ section {
    justify-content: center;
    padding: 30px 10px;
    user-select: none;
+   
 }
 
 input[type="radio"] {
@@ -443,6 +445,7 @@ input[type="radio"] {
 }
 
 .container {
+   
    width: 100%;
    max-width: 800px;
    height: 100%;
@@ -457,7 +460,9 @@ input[type="radio"] {
    position: relative;
    width: 100%;
    height: 100%;
+   
 }
+
 
 .card {
    position: absolute;
@@ -468,14 +473,17 @@ input[type="radio"] {
    margin: auto;
    cursor: pointer;
    transition: transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+
 }
 
-#img {
+.card #img  {
+   
    width: 100%;
    height: 100%;
    border-radius: 10px;
    -o-object-fit: cover;
    object-fit: cover;
+   
 }
 
 /*Izquierda 40% transparente*/
@@ -528,20 +536,24 @@ footer.home-footer {
 }
 
 
-/*----------TEST GALERIA--------------------*/
+/*----------GALERIA--------------------*/
 
 .carreaux_presentation_light {
+   
    display: table-cell;
    width: 400px;
-   height: 300px;
+   height: 270px;
    background-size: cover;
    overflow: hidden;
    position: relative;
    border-radius: 10%;
+   background-size: cover;
+  background-position: center;
 }
 
 /* Oscurer la imagen cuando no pasa el mouse*/
 .carreaux_presentation_light .shadow_swhow_mini {
+   
    background-color: rgba(19, 30, 33, 0.4);
    position: absolute;
    z-index: 1;
