@@ -128,21 +128,18 @@ section {
    cursor: pointer;
 }
 
+
 .home-bg {
-   background: linear-gradient(90deg, var(--white), transparent 70%),
-      url("/CoffeeJuls/LandingPage/images/home-bg.jpg") no-repeat;
+   background: linear-gradient(180deg, var(--black), transparent 50%),
+      url("https://img5.thuthuatphanmem.vn/uploads/2021/12/03/hinh-nen-cafe-mau-nau-nhat_104824107.png") no-repeat;
    background-size: cover;
-   background-position: center;
+   background-position: bottom;
 }
 
-.home-bg .home {
-   min-height: 70rem;
-   display: flex;
-   align-items: center;
-}
+
 
 .home-bg .home .content {
-   width: 50rem;
+   width: rem;
    text-align: center;
 }
 
@@ -592,21 +589,13 @@ footer.home-footer {
 
 .participantes {
    padding: 5em;
-   margin: 5em;
+  
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
    gap: 1.5rem;
-   align-items: flex-start;
+   place-items: center; /* Centra los elementos vertical y horizontalmente dentro de sus celdas de cuadrícula */
 }
 
-#participante {
-   padding: 5em;
-   margin: 5em;
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-   gap: 1.5rem;
-   align-items: flex-start;
-}
 
 
 
@@ -1358,11 +1347,43 @@ footer.home-footer {
 
 
 
+.agradecimientos {
+   background-color: #f8f8f8;
+   padding: 50px 20px;
+   text-align: center;
+   border-top: 5px solid #ff6f61;
+   border-bottom: 5px solid #ff6f61;
+}
 
+.agradecimientos .container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+.agradecimientos-titulo {
+   font-size: 2.5em;
+   color: #333;
+   margin-bottom: 20px;
+   font-family: 'Arial Black', sans-serif;
+   text-transform: uppercase;
+}
+
+.agradecimientos-contenido p {
+   font-size: 1.2em;
+   color: #555;
+   line-height: 1.6;
+   font-family: 'Arial', sans-serif;
+   margin-bottom: 20px;
+}
+
+.agradecimientos-contenido p:last-child {
+   font-style: italic;
+   color: #ff6f61;
+}
 
 .Comentarios{
-   margin: 0;
-	padding: 0;
+   
 	overflow-x: hidden;
 	display: flex;
 	justify-content: center;
@@ -1372,6 +1393,12 @@ footer.home-footer {
 
 .content {
 	width: 90vmin;
+}
+
+#textoHome {
+   color: #ffffff;
+   background: rgba(0, 0, 0, 0.5); /* Esto crea un fondo negro con una transparencia del 70% */
+   border-radius: 10px;
 }
 
 .team {
